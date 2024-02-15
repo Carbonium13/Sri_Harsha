@@ -1,43 +1,45 @@
-# Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
 
-on:
-  # Runs on pushes targeting the default branch
-  push:
-    branches: ["main"]
+        header {
+            text-align: center;
+            padding: 10px;
+            background-color: #f2f2f2;
+        }
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+        h1 {
+            color: #333;
+        }
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+        .contact-info {
+            margin-top: 20px;
+        }
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
+        .contact-info p {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
 
-jobs:
-  # Single deploy job since we're just deploying
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          # Upload entire repository
-          path: '.'
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+    <header>
+        <h1>Contact Us</h1>
+    </header>
+
+    <div class="contact-info">
+        <p><strong>Phone Number:</strong> 9632228366</p>
+        <p><strong>Email:</strong> <a href="mailto:carbonvyn13@gmail.com">carbonvyn13@gmail.com</a></p>
+        <p><strong>Address:</strong> Affinity Blossom, 6th B Cross Road, Carmelaram, Hadosiddapura, Chikkakannalli, Bengaluru, Karnataka 560035</p>
+    </div>
+
+</body>
+</html>
